@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: praseedsmarthotelwebsite 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: praseedsmarthotelwebsite 
+    spec:
+      containers:
+        - name: praseedsmarthotelwebsite 
+          image: practiceacr1.azurecr.io/praseedsmarthotelwebsite
+          ports:
+          - containerPort: 80
